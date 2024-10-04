@@ -17,10 +17,32 @@ for (let i = 0; i < arrStr.length; i++) {
 
 let columns = cells[0].length;
 
-console.log(columns);
+// console.log(columns);
 
 // third problem
-for (let i = 0; i < cells.length; i++) {
+let arr = [];
+for (let i = 1; i < cells.length; i++) {
   let obj = {};
-  for (let j = 0; j < columns.length; j++) {}
+  for (let j = 0; j < columns; j++) {
+    obj[cells[0][j]] = cells[i][j];
+  }
+  arr[i - 1] = obj;
 }
+console.log(arr);
+
+// fourth problem
+let poppedArr = arr.pop();
+
+poppedArr[1] = {
+  id: "48",
+  name: "Barry",
+  occupation: "Runner",
+  age: "25",
+};
+
+let pushedArr1 = poppedArr.push({
+  id: "7",
+  name: "Bilbo",
+  occupation: "None",
+  age: "111",
+});
