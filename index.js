@@ -22,7 +22,7 @@ let arr = [];
 for (let i = 1; i < cells.length; i++) {
   let obj = {};
   for (let j = 0; j < columns; j++) {
-    obj[cells[0][j]] = cells[i][j];
+    obj[cells[0][j].toLowerCase()] = cells[i][j];
   }
   arr[i - 1] = obj;
 }
@@ -50,7 +50,7 @@ function average(num) {
   let sum = 0;
   let count = num.length;
   for (let i = 0; i < count; i++) {
-    sum += num[i];
+    sum += Number(num[i].age);
   }
   return sum / count;
 }
